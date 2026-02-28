@@ -80,7 +80,7 @@
 
                 <div class="p-4 border-t-2 border-black text-center bg-[var(--color-octonary)]">
                     <p class="mb-3 font-bold text-white">¿Quieres ver todos los detalles?</p>
-                    <a href="https://drive.google.com/file/d/1tvNfv1LYabgbA0i-q1pmpoCGRiw1U2iY/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1Vh_DpVtCMuqUO3_zirK7NTS548dTCvSi/view?usp=sharing"
                         target="_blank"
                         class="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-secondary)] text-white rounded font-bold hover:bg-[var(--color-primary)] transition-all shadow-solid border-2 border-black hover:translate-y-[3px] hover:translate-x-[3px] hover:shadow-none">
                         <font-awesome-icon icon="fa-solid fa-download" /> Descargar CV
