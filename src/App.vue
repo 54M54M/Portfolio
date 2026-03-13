@@ -88,6 +88,7 @@
         <div class="font-bold text-sm mb-2">
           <p>{{ portfolioData.skills.software.description }}</p>
           <br>
+
           <div class="flex flex-col items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
               <a v-for="(icon, index) in portfolioData.skills.software.items.slice(0, 3)" :key="index"
@@ -95,7 +96,14 @@
                 <img :src="icon" />
               </a>
             </div>
+            <div class="flex flex-wrap justify-center text-2xl gap-2">
+              <a v-for="(icon, index) in portfolioData.skills.software.items.slice(3)" :key="index + 3"
+                class="flex items-center justify-center w-10 h-10 text-2xl shadow-solid rounded-xl border-3 border-black hover:translate-y-[5px] hover:translate-x-[5px] hover:shadow-none duration-100">
+                <img :src="icon" />
+              </a>
+            </div>
           </div>
+
         </div>
       </TheWindow>
 
@@ -104,6 +112,7 @@
         <div class="font-bold text-sm mb-2">
           <p>{{ portfolioData.skills.learning.description }}</p>
           <br>
+          
           <div class="flex flex-col items-center gap-3">
             <div class="flex flex-wrap justify-center text-2xl gap-2">
               <a v-for="(icon, index) in portfolioData.skills.learning.items.slice(0, 3)" :key="index"
@@ -118,33 +127,37 @@
               </a>
             </div>
           </div>
+
         </div>
       </TheWindow>
     </div>
 
     <!-- - E X P E R I E N C I A - L A B O R A L - -->
-    <!-- <TheWindow class="mb-3" :title="portfolioData.experience.title" color="senary">
-      <div class="font-bold text-lg mb-2 mx-4">
-        
-        <div v-for="(job, index) in visibleExperiences" :key="index" class="mb-6">
-          <div class="flex justify-between items-start">
-            <h3 class="text-xl font-bold text-[var(--color-secondary)]">{{ job.position }}</h3>
-            <span class="bg-[var(--color-octonary)] text-white px-2 py-1 rounded text-sm">{{ job.period }}</span>
+    <!-- TheWindow class="mb-3" :title="portfolioData.experience.title" color="senary">
+      <div class="space-y-3 mx-1">
+        <div
+          v-for="(job, i) in portfolioData.experience.items" :key="i"
+          class="experience-card rounded-lg border-2 border-black bg-white/40 p-4 shadow-[3px_3px_0_#000] hover:shadow-[1px_1px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150"
+        >
+          <div class="flex justify-between items-start flex-wrap gap-2 mb-1">
+            <h3 class="font-black text-sm text-[var(--color-secondary)]">{{ job.position }}</h3>
+            <span class="text-xs font-bold bg-[var(--color-octonary)] text-white px-2 py-0.5 rounded-full border border-black whitespace-nowrap">
+              {{ job.period }}
+            </span>
           </div>
-          <h4 class="text-lg font-semibold mb-2">{{ job.company }}</h4>
-          <ul class="list-disc pl-5">
-            <li v-for="(desc, descIndex) in job.description" :key="descIndex" class="mb-1">{{ desc }}</li>
+          <h4 class="font-bold text-xs text-gray-500 mb-2">{{ job.company }}</h4>
+          <ul class="space-y-1">
+            <li
+              v-for="(desc, di) in job.description" :key="di"
+              class="text-sm font-semibold text-gray-700 flex gap-2"
+            >
+              <span class="text-[var(--color-secondary)] font-black shrink-0">→</span>
+              <span>{{ desc }}</span>
+            </li>
           </ul>
         </div>
-
-        <div v-if="showLoadMore" class="text-center mt-4">
-          <button @click="loadMoreExperiences"
-            class="bg-[var(--color-secondary)] text-white px-4 py-2 rounded-lg shadow-solid border-2 border-black hover:translate-y-[3px] hover:translate-x-[3px] hover:shadow-none transition-all duration-100">
-            Cargar más experiencias
-          </button>
-        </div>
       </div>
-    </TheWindow> -->
+    </TheWindow -->
 
     <!-- P R O Y E C T O S -->
     <TheWindow class="mb-3" :title="portfolioData.projects.title" color="senary">
