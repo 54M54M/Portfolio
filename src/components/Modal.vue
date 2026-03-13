@@ -26,11 +26,11 @@
             <div class="flex gap-1.5 shrink-0">
               <button
                 @click="closeModal"
-                class="w-3.5 h-3.5 border-2 border-black rounded-full bg-red-400 hover:bg-red-600 transition-colors duration-150 cursor-pointer"
+                class="w-3.5 h-3.5 cursor-pointer"
                 title="Cerrar"
-              ></button>
-              <div class="w-3.5 h-3.5 border-2 border-black rounded-full bg-yellow-400"></div>
-              <div class="w-3.5 h-3.5 border-2 border-black rounded-full bg-green-400"></div>
+              >
+              
+            </button>
             </div>
             <div class="grow text-center font-black tracking-widest text-xs uppercase text-white">
               — Curriculum Vitae —
